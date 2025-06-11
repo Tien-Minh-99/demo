@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShowLog : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
+    public float flySpeed;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello Kitty");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("Update called" + Time.frameCount);
+        var newPosition = transform.position;
+        newPosition.y += Time.deltaTime * flySpeed;
+        transform.position = newPosition;
     }
 }

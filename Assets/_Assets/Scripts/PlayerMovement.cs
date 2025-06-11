@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.mousePosition);
+        //Debug.Log(Input.mousePosition);
         var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //var: thay vì viết kiểu dữ liệu thì var sẽ lấy kết quả trả về làm kiểu dữ liệu 
         //screen là màn hình 
