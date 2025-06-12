@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,12 +19,12 @@ public class PlayerShooting1 : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))// nhận lần bấm con chuột 
         {
-            if(Time.time-lastBulletTime> shootingInterval)
+            if(Time.time-lastBulletTime> shootingInterval)// kiểm tra thời gian để bắn viên đạn tiếp theo
             {
-                ShootBullet();
-                lastBulletTime = Time.time;
+                ShootBullet();// tạo ra viên đạn mới 
+                lastBulletTime = Time.time;// cập nhập vị trí viên đạn 
 
             }
         }
@@ -32,6 +32,7 @@ public class PlayerShooting1 : MonoBehaviour
     private void ShootBullet()
     {
         Instantiate(bulletPrefab, transform.position, transform.rotation);
+        //tạo ra bản sao của 1 viên đạn
     }
 
 }

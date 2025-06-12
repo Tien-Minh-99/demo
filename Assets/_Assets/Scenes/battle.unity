@@ -203,6 +203,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Short-Lazer-Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 5977923755724743293, guid: 0d249455bbeb4ff40a7556475338d6bb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5977923755724743294, guid: 0d249455bbeb4ff40a7556475338d6bb,
         type: 3}
       propertyPath: m_RootOrder
