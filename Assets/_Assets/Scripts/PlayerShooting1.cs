@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShooting1 : MonoBehaviour
 {
-
+    public Vector3 bulletOffset;
     public GameObject bulletPrefab;
     public float shootingInterval;
     private float lastBulletTime;
@@ -18,20 +18,25 @@ public class PlayerShooting1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
-        if (Input.GetMouseButtonDown(0))// nhận lần bấm con chuột 
+        if (Input.GetMouseButton(0))// nhận lần bấm con chuột 
         {
-            if(Time.time-lastBulletTime> shootingInterval)// kiểm tra thời gian để bắn viên đạn tiếp theo
-            {
-                ShootBullet();// tạo ra viên đạn mới 
-                lastBulletTime = Time.time;// cập nhập vị trí viên đạn 
+            UpdateFiring();
+        }
+    }
+    private void UpdateFiring()
+    {
+        if (Time.time - lastBulletTime > shootingInterval)// kiểm tra thời gian để bắn viên đạn tiếp theo
+        {
+            ShootBullet();// tạo ra viên đạn mới 
+            lastBulletTime = Time.time;// cập nhập vị trí viên đạn 
 
-            }
         }
     }
     private void ShootBullet()
     {
-        Instantiate(bulletPrefab, transform.position, transform.rotation);
+         var bullet = Instantiate(bulletPrefab, transform.position+bulletOffset, transform.rotation);
         //tạo ra bản sao của 1 viên đạn
     }
 

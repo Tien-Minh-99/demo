@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9194186948874111136}
   - component: {fileID: 9194186948874111150}
   - component: {fileID: 9194186948874111151}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Engine_01_Basic (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 9194186949312673617}
   - component: {fileID: 9194186949312673616}
   - component: {fileID: 9194186949312673618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Short-Lazer-Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
