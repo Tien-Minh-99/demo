@@ -17,5 +17,18 @@ public class Bullet : MonoBehaviour
         var newPosition = transform.position;// tạo ra vị trí mới và gán vị trí hiện tại cho vị trí mới ( vị trí mới = vị trí hiên tại ) 
         newPosition.y += Time.deltaTime * flySpeed;// delta x = vận tốc (V) * thời gian (T)
         transform.position = newPosition;// cập nhập lại vị trí (vị trí hiện tại = vị trí mới )
+        if (transform.position.y > 6)
+        {
+            Destroy(gameObject);// xoá đạn khi nó bay ra khỏi màn hình 
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D col)// hàm đặc biệt (event function) đuọc gọi khi 
+        //một collider2d đi vào vùng trigger của object
+    {
+        if (col.CompareTag("Enemy"))// kiểm tra xem object cso đúng tag không 
+        {
+            Destroy(col.gameObject);// xoá enemy
+            Destroy(gameObject); // xoá viên đạn 
+        }
     }
 }

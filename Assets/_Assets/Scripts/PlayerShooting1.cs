@@ -24,6 +24,7 @@ public class PlayerShooting1 : MonoBehaviour
         {
             UpdateFiring();
         }
+      
     }
     private void UpdateFiring()
     {
