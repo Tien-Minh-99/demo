@@ -22,13 +22,13 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);// xoá đạn khi nó bay ra khỏi màn hình 
         }
     }
-    private void OnTriggerEnter2D(Collider2D col)// hàm đặc biệt (event function) đuọc gọi khi 
-        //một collider2d đi vào vùng trigger của object
-    {
-        if (col.CompareTag("Enemy"))// kiểm tra xem object cso đúng tag không 
-        {
-            Destroy(col.gameObject);// xoá enemy
-            Destroy(gameObject); // xoá viên đạn 
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D col)// hàm đặc biệt (event function) đuọc gọi khi 
+    //    //một collider2d đi vào vùng trigger của object
+    //{
+    //    if (col.CompareTag("Enemy"))// kiểm tra xem object cso đúng tag không 
+    //    {
+    //        Destroy(col.gameObject);// xoá enemy
+    //        Destroy(gameObject); // xoá viên đạn 
+    //    }
+    //}
 }

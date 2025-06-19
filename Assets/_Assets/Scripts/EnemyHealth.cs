@@ -10,6 +10,11 @@ public class EnemyHealth : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Die();
+        if (collision.CompareTag("Bullet"))// chỉ cần đúng tag là dùng bên nào cũng được 
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
     private void Die()
     {
