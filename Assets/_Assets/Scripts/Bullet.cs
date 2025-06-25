@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float flySpeed;
+    public int damege;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +26,17 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)// hàm đặc biệt (event function) đuọc gọi khi 
         //một collider2d đi vào vùng trigger của object
     {
-        if (col.CompareTag("Enemy"))// kiểm tra xem object cso đúng tag không 
+        var enemy = col.GetComponent<EnemyHealth>();// kiểm tra xem col mà viên đạn vừa chạm vào có component EnemyHealth không 
+        if (enemy != null)// kiểm tra có đúng là 1 enemy không 
         {
-            Destroy(col.gameObject);// xoá enemy
-            Destroy(gameObject); // xoá viên đạn 
+            enemy.TakeDamege(damege);// gọi hàm TakeDamege của enemy dẻ trừ máu theo lượng damege
         }
+        Destroy(gameObject);
+        //if (col.CompareTag("Enemy"))// kiểm tra xem object cso đúng tag không 
+        //{
+        //    Destroy(col.gameObject);// xoá enemy
+        //    Destroy(gameObject); // xoá viên đạn 
+        //}
+        
     }
 }
