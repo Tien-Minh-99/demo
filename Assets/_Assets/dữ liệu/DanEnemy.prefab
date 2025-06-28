@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flySpeed: 10
-  damege: 1
+  damage: 1
 --- !u!212 &1209964912205803858
 SpriteRenderer:
   m_ObjectHideFlags: 0

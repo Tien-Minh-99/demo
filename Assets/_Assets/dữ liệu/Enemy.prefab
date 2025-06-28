@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 3615950260660998982, guid: 3a80d6db791bc2542a391725bebec9e3,
     type: 3}
-  defauHealthPoint: 3
+  defaultHealthPoint: 3
 --- !u!114 &2897456954468515410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 2258930610927020006}
-  damege: 3
+  damage: 1
 --- !u!212 &6433747976536183369
 SpriteRenderer:
   m_ObjectHideFlags: 0

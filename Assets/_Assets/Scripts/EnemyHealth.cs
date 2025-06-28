@@ -8,7 +8,7 @@ public class EnemyHealth : Health
     protected override void Die()
     {
         base.Die();
-        Debug.Log("Player died");
+        Debug.Log("enemy died");
 
     }
 

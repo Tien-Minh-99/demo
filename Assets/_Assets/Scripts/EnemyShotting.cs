@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyShotting : MonoBehaviour
 {
     public float flySpeed;
-    public int damege;
+    public int damage;
     public float thoiGianTonTai = 2f;
     // Start is called before the first frame update
     void Start()

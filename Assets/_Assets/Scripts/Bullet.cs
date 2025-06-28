@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float flySpeed;
-    public int damege;
+    public int damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
         var enemy = col.GetComponent<EnemyHealth>();// kiểm tra xem col mà viên đạn vừa chạm vào có component EnemyHealth không 
         if (enemy != null)// kiểm tra có đúng là 1 enemy không 
         {
-            enemy.TakeDamege(damege);// gọi hàm TakeDamege của enemy dẻ trừ máu theo lượng damege
+            enemy.TakeDamage(damage);// gọi hàm Takedamage của enemy dẻ trừ máu theo lượng damage
         }
         Destroy(gameObject);
         //if (col.CompareTag("Enemy"))// kiểm tra xem object cso đúng tag không 

@@ -31,7 +31,7 @@ public class PlayerShooting1 : MonoBehaviour
         if (Time.time - lastBulletTime > shootingInterval)// kiểm tra thời gian để bắn viên đạn tiếp theo
         {
             ShootBullet();// tạo ra viên đạn mới 
-            lastBulletTime = Time.time;// cập nhập vị trí viên đạn 
+            lastBulletTime = Time.time;// cập nhập thời gian bắn 
 
         }
     }

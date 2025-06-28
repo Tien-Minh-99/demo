@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyActtack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     public EnemyHealth health;
-    public int damege;
+    public int damage;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var playerHealth = collision.GetComponent<PlayerHealth>();// tìm xem đối tượng va chạm có component PlayerHealth không 
         if (playerHealth != null)
         {
-            playerHealth.TakeDamege(damege);// gây sát thương cho người chơi 
+            playerHealth.TakeDamage(damage);// gây sát thương cho người chơi 
            
-            health.TakeDamege(1000); // gây sát thương cực lớn lên enemy 
+            health.TakeDamage(1000); // gây sát thương cực lớn lên enemy 
         }
     }
     // Start is called before the first frame update
