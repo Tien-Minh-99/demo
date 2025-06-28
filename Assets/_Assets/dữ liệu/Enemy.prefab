@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3915625063858620170}
   - component: {fileID: 2258930610927020006}
+  - component: {fileID: 2897456954468515410}
   - component: {fileID: 6433747976536183369}
   - component: {fileID: 3480029292600572237}
   - component: {fileID: 809005583873871561}
-  - component: {fileID: 2897456954468515410}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -51,6 +51,20 @@ MonoBehaviour:
   explosionPrefab: {fileID: 3615950260660998982, guid: 3a80d6db791bc2542a391725bebec9e3,
     type: 3}
   defauHealthPoint: 3
+--- !u!114 &2897456954468515410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8897368661890671344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53e629e42755e64e98b1acddc65e063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 2258930610927020006}
+  damege: 3
 --- !u!212 &6433747976536183369
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -170,17 +184,3 @@ PolygonCollider2D:
       - {x: -0.112, y: -0.47200003}
       - {x: -0.104, y: -0.080000006}
       - {x: -0.048, y: -0.296}
---- !u!114 &2897456954468515410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8897368661890671344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c53e629e42755e64e98b1acddc65e063, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 2258930610927020006}
-  damege: 1

@@ -13,6 +13,7 @@ public class EnemyActtack : MonoBehaviour
         if (playerHealth != null)
         {
             playerHealth.TakeDamege(damege);// gây sát thương cho người chơi 
+           
             health.TakeDamege(1000); // gây sát thương cực lớn lên enemy 
         }
     }

@@ -198,6 +198,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2897456954468515410, guid: e384be004b62bb843b537ae262f52377,
+        type: 3}
+      propertyPath: damege
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3915625063858620170, guid: e384be004b62bb843b537ae262f52377,
         type: 3}
       propertyPath: m_RootOrder
