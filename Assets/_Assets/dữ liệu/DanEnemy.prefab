@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1209964912205803858}
   - component: {fileID: 8131778609976479904}
   - component: {fileID: 760763322055907863}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DanEnemy
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
