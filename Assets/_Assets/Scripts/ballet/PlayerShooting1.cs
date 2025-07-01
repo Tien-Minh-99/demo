@@ -10,12 +10,7 @@ public class PlayerShooting1 : MonoBehaviour
     private float lastBulletTime;
    
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         

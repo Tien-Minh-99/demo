@@ -43,9 +43,5 @@ public class Health : MonoBehaviour
         Debug.Log("HP còn lại: " + healthPoint);
     }
   
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 }

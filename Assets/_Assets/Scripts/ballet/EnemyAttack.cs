@@ -17,15 +17,5 @@ public class EnemyAttack : MonoBehaviour
             health.TakeDamage(1000); // gây sát thương cực lớn lên enemy 
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
