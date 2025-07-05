@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public GameObject explosionPrefab;
     public int defaultHealthPoint;
     private int healthPoint;
-    public System.Action onDead;
+    public System.Action onDead; // Action: Delegate không có tham số, trả về void
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
         var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(explosion, 1f);
         Destroy(gameObject);
-        onDead?.Invoke();
+        onDead?.Invoke(); // ?. là toán tử kiểm tra xem onDead có khác null không trước khi gọi Invoke
     }
     public void TakeDamage(int damage)
     {
