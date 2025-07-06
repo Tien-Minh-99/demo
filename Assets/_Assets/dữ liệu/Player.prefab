@@ -230,6 +230,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 9148166732352733522, guid: 81fd0ad2be646ab4dadcb11a20086b4b,
     type: 3}
   defaultHealthPoint: 3
+  heathPoint: 0
 --- !u!50 &1600590579839302380
 Rigidbody2D:
   serializedVersion: 4

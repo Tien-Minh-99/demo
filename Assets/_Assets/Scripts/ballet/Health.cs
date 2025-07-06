@@ -8,18 +8,18 @@ public class Health : MonoBehaviour
     
     public GameObject explosionPrefab;
     public int defaultHealthPoint;
-    private int healthPoint;
+    //private int healthPoint;
     public System.Action onDead; // Action: Delegate không có tham số, trả về void
+    public System.Action onHeathChanged;
+
+    public int healthPoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        healthPoint = defaultHealthPoint;// số máu hiện tại bằng số máu ban đầu 
+        healthPoint = defaultHealthPoint;// số máu hiện tại bằng số máu ban đầu
+        onHeathChanged?.Invoke();
     }
-    //public void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    Die();
-    //}
     protected virtual void Die()// chuyển Die qua class health để dùng lại nhiều lần 
     {
         var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
@@ -34,6 +34,7 @@ public class Health : MonoBehaviour
             return;// nếu đã chết thì bỏ qua 
         }
         healthPoint -= damage;// trừ máu 
+        onHeathChanged?.Invoke();
         if (healthPoint <= 0)
         {
             Die();// nếu máu giảm còn 0 thì Die

@@ -9,13 +9,5 @@ public class PlayerHealth : Health
         base.Die();
         Debug.Log("player died");
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.GetComponent<EnemyHealth>()!=null)
-        {
-            Debug.Log("player va cham voi enemy");
-            TakeDamage(1);
-        }
-    }
- 
+  
 }
