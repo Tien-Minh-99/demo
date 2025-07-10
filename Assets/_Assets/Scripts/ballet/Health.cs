@@ -8,10 +8,8 @@ public class Health : MonoBehaviour
     
     public GameObject explosionPrefab;
     public int defaultHealthPoint;
-    //private int healthPoint;
     public System.Action onDead; // Action: Delegate không có tham số, trả về void
-    public System.Action onHeathChanged;
-
+    public System.Action onHeathChanged;// sự kiện để thông báo cho tất cả những class chưa health có sự thay đổi 
     public int healthPoint;
 
     // Start is called before the first frame update
@@ -41,6 +39,6 @@ public class Health : MonoBehaviour
         }
         Debug.Log("HP còn lại: " + healthPoint);
     }
-  
- 
+  // toán tử ?. sẽ kiểm tra xem phần được gọi có khác null không rồi sẽ gọi hàm invoke
+ //invoke là để gọi sự kiện phía trước nó
 }

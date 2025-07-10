@@ -22,15 +22,17 @@ public class BattleFlow : MonoBehaviour
         gameOverUI.SetActive(true);
         bgMusic.SetActive(false);
     }
-    private void Update()
+    public void Update()
     {
         if (EnemyHealth.LivingEnemyCount <= 0) // khi không còn enemy noà thì hiện win game
         {
             OnGameWin();
         }
+        
     }
-    private void OnGameWin()
+    public void OnGameWin()
     {
+        
         gameWinUI.SetActive(true);
         bgMusic.SetActive(false);
         playerHealth.gameObject.SetActive(false);

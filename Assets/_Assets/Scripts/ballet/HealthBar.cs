@@ -18,6 +18,10 @@ public class HealthBar : MonoBehaviour
 
    private void UpdateHealthValue()
     {
+        if (this == null || mask == null || health == null)
+        {
+            return;
+        }
         float scale = (float)health.healthPoint / health.defaultHealthPoint;
         mask.sizeDelta = new Vector2(scale * originalWidth, mask.sizeDelta.y);
     }
