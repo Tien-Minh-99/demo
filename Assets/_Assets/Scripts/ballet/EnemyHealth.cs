@@ -17,4 +17,10 @@ public class EnemyHealth : Health
         Debug.Log("enemy died");
 
     }
+    public void SilentDie()
+    {
+        LivingEnemyCount--; 
+        Destroy(gameObject);
+        //giảm số lượng enemy nhưng không gọi âm thanh hay hiệu ứng chết 
+    }
 }

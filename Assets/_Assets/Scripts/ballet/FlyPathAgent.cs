@@ -20,6 +20,13 @@ public class FlyPathAgent : MonoBehaviour
         }
         if (nextIndex >= flyPath.waypoints.Length)
         {
+            //nếu enemy vẫn còn máu ( không bị bắn chết ) gọi Die() để cập nhập số lượng 
+            var health = GetComponent<EnemyHealth>();
+            if(health!=null && health.healthPoint > 0)
+            {
+                health.SilentDie();// ép enemy chết bằng cách trừ hết máu 
+
+            }
             Destroy(gameObject);
             return;
         }
